@@ -13,7 +13,7 @@ hafna.vb	n	d
 hefna.vb	n	g	fyrir,a
 hlığa.vb	n	x,d	á,a
 hreinsa.vb	n	a	til,x
-hrökkva.sb	n	x,a	til,xg	fyrir,d	af,d	út af,d	af,d	í,a	saman,x	upp af,xa	upp,x	úr,xa	undan,xa
+hrökkva.sb	n	x,a	til,x,g	fyrir,d	af,d	út af,d	af,d	í,a	saman,x	upp af,x,d	upp,x	úr,x,d	undan,x,d
 höggva.sb	n	x,a	á,a	í,a	af,a	til,a
 játa.vb	n	x,a,d-a
 klappa.vb	n	x,d	saman,d	fyrir,d
@@ -22,15 +22,15 @@ kyssa.vb	n	x,a	á,a
 lúta.sb	n	x,a	í,a	undir,a	ağ,d
 mála.vb	n	x,a	á,a
 rugla.vb	n	x,a,d	í,d	saman,d
-skoğa.vb	n	a	í,a	til,xg	upp í,a
+skoğa.vb	n	a	í,a	til,x,g	upp í,a
 spretta.vb	n	x,a	á,a
-spretta.sb	n	g	úr,d	upp,xa	fram,n
+spretta.sb	n	g	úr,d	upp,x,d	fram,n
 styğja.vb	n	a	á,a	í,a	viğ,a	ağ,d
 stökkva.vb	n	x,d
 stökkva.sb	n	x	burt,x	af,d	á,a	í,a	viğ,a
 stökkva.sb	a	n
 synda.vb	n	x,a
-syngja.sb	n	x,d-a,a,d	í,a	inn á,a	fyrir,a	meğ,d	á,d	fyrir,d
+syngja.sb	n	x,d-a,a,d	í,a	inn á,a	fyrir,a	meğ,x,d	á,d	fyrir,d
 tefla.vb	n	x,a,d	fram,d	á,a	viğ,a	um,a
 trufla.vb	n	x,a
 trúa.vb	n	x,d	á,a

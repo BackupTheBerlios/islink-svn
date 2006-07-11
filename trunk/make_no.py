@@ -9,11 +9,11 @@ def make_no(inf):
     kyn = 'v'
   elif kyn == 'hk':
     kyn = 'h'
-  
+
   foll = ['n', 'a', 'd', 'g']
   akvednir = ['a', 'o']
   tolur = ['e', 'f']
-  
+
   myndir = dict()
   for tala in tolur:
     for akvedni in akvednir:

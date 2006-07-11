@@ -53,6 +53,14 @@ handan.f innan.f austan.f neðan.f norðan.f ofan.f sunnan.f vestan.f utan.f millu
 á.f í.f undir.f yfir.f: ((IK- & S***a+) or (IH- & S***d+);
 með.f fyrir.f við.f: IH- & (S***a+ IH- & S***d+);
 
+
+
+%mala: Fef*n*- & {E+} & (S***d+ or (NIDUR_I+ & S***a+) & {@IK+};
+
+
+niður_í.sf: NIDUR_I- & S***a+;
+
+
 % sagnorð í nafnhætti:
 % sagnorð í lýsingarhætti þátíðar:
 % sagnorð í lýsingarhætti nútíðar:
