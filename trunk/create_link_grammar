@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cp data/dict link_grammar/dict
+python make_no.py data/*.no.* >> link_grammar/dict
+python make_lo.py data/*.lo >> link_grammar/dict

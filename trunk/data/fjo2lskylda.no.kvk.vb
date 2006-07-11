@@ -1,0 +1,17 @@
+kvk
+fjölskylda
+fjölskyldu
+fjölskyldu
+fjölskyldu
+fjölskyldan
+fjölskylduna
+fjölskyldunni
+fjölskyldunnar
+fjölskyldur
+fjölskyldur
+fjölskyldum
+fjölskyldna
+fjölskyldurnar
+fjölskyldurnar
+fjölskyldunum
+fjölskyldnanna
