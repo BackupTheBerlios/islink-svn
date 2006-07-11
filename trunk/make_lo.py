@@ -14,7 +14,7 @@ def lesaLinu(inf, myndir, akvedni, tala, kyn, fall, st):
 
 def make_lo(inf):  
   kyn = ['k', 'v', 'h']
-  foll = ['n', 'd', 'a', 'g']
+  foll = ['n', 'a', 'd', 'g']
   akvednir = ['a', 'o']
   tolur = ['e', 'f']
   stig = ['n', 'm', 'e']

@@ -7,121 +7,53 @@
 % persóna: f / o / t
 % háttur: p / v / b
 % kyn: k / v / h
-% fall: n / d / a / g
+% fall: n / a / d / g
 % ákveðni: a / o
 % stig: n / m / e
+%
+% F = frumlag
+% S = andlag
+% E = ekki
+% IK = forsetningarliður, eða atviksorð, sem tákna hreyfingu
+% IH = hreyfing
 
-borðar.v: Fet*n*- & {E+} & {S***d+} & {Ik+};
-borða.v: Fft*n*- & {E+} & {S***d+} & {Ik+};
+%%%%%%borðar.v: Fet*n*- & {E+} & {S***a+} & {IK+};
+%%%%%%borða.v: Fft*n*- & {E+} & {S***a+} & {IK+};
+%%%%%%fá.v: Fft*n*- & {E+} & S***d+ & {Ik+};
 
-er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkna- & {E+} & BAekna*+) or (Fetvna- & {E+} & BAevna*+) or (Fethna- & {E+} & BAehna*+)  or (Fetkno- & {E+} & BAekno*+) or (Fetvno- & {E+} & BAevno*+) or (Fethno- & {E+} & BAehno*+)) & {Ik+};
-fá.v: Fft*n*- & {E+} & S***d+ & {Ik+};
+er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkna- & {E+} & BAekna*+) or (Fetvna- & {E+} & BAevna*+) or (Fethna- & {E+} & BAehna*+)  or (Fetkno- & {E+} & BAekno*+) or (Fetvno- & {E+} & BAevno*+) or (Fethno- & {E+} & BAehno*+)) & {IK+};
 
 ekki.a: E-;
-í: (Ik- & S***a+) or (Ih- & S***d+);
-5
+
+% Forsetningar
+
+% Forsetningar sem stýra bara þolfalli
+% og geta staðið með hreyfingu og kyrrstöðu
+um.f: (IH- or IK-) & S***a+;
+% og geta staðið með hreyfingu og en ekki kyrrstöðu
+gegnum.f kringum.f:  IH- & S***a+;
+% og geta ekki staðið með hreyfingu
+umfram.f  umhverfis.f: IK- & S***a+;
+
+% Forsetningar sem stýra bara þágufalli
+% og geta staðið með hreyfingu og kyrrstöðu
+að.f: frá.f meðfram.f af.f gegn.f úr.f undan.f móti.f  mót.f: (IH- or IK-) & S***d+;
+% og geta ekki staðið með hreyfingu
+hjá.f andspænis.f gagnvart.f gegnt.f ásamt.f handa.f: IH- & S***d+;
+
+% Forsetningar sem stýra bara eignarfalli:
+% og geta staðið með hreyfingu og kyrrstöðu
+án.f meðal.f auk.f milli.f sakir.f sökum.f vegna.f: (IH- or IK-) & S***g+;
+megin.f: S***g+ & (IH- or IK-);
+% og geta staðið með hreyfingu og en ekki kyrrstöðu
+til.f: IK- & S***g+;
+% og geta ekki staðið með hreyfingu
+handan.f innan.f austan.f neðan.f norðan.f ofan.f sunnan.f vestan.f utan.f millum.f: IH- & S***g+;
+
+á.f í.f undir.f yfir.f: ((IK- & S***a+) or (IH- & S***d+);
+með.f fyrir.f við.f: IH- & (S***a+ IH- & S***d+);
+
 % sagnorð í nafnhætti:
 % sagnorð í lýsingarhætti þátíðar:
 % sagnorð í lýsingarhætti nútíðar:
 % fornafn: [tala][kyn][fall][persóna]
-Bretland.n: ({[[@Aehna-]]} & (({SE***g+} & Fethna+) or (Sethna- & {SE***g+}))) or ({[[@Aehda-]]} & (({SE***g+} & Fethda+) or (Sethda- & {SE***g+})));
-Bretlands.n: (({[[@Aehga-]]} & SEethga-) or (({[[@Aehga-]]} & (({SE***g+} & Fethga+) or (Sethga- & {SE***g+})))));
---.n: ({[[@Aehno-]]} & (({SE***g+} & Fethno+) or (Sethno- & {SE***g+}))) or ({[[@Aehdo-]]} & (({SE***g+} & Fethdo+) or (Sethdo- & {SE***g+}))) or ({[[@Aehao-]]} & (({SE***g+} & Fethao+) or (Sethao- & {SE***g+}))) or (({[[@Aehgo-]]} & SEethgo-) or (({[[@Aehgo-]]} & (({SE***g+} & Fethgo+) or (Sethgo- & {SE***g+}))))) or ({[[@Afhna-]]} & (({SE***g+} & Ffthna+) or (Sfthna- & {SE***g+}))) or ({[[@Afhda-]]} & (({SE***g+} & Ffthda+) or (Sfthda- & {SE***g+}))) or ({[[@Afhaa-]]} & (({SE***g+} & Ffthaa+) or (Sfthaa- & {SE***g+}))) or (({[[@Afhga-]]} & SEfthga-) or (({[[@Afhga-]]} & (({SE***g+} & Ffthga+) or (Sfthga- & {SE***g+}))))) or ({[[@Afhno-]]} & (({SE***g+} & Ffthno+) or (Sfthno- & {SE***g+}))) or ({[[@Afhdo-]]} & (({SE***g+} & Ffthdo+) or (Sfthdo- & {SE***g+}))) or ({[[@Afhao-]]} & (({SE***g+} & Ffthao+) or (Sfthao- & {SE***g+}))) or (({[[@Afhgo-]]} & SEfthgo-) or (({[[@Afhgo-]]} & (({SE***g+} & Ffthgo+) or (Sfthgo- & {SE***g+})))));
-Bretlandi.n: ({[[@Aehaa-]]} & (({SE***g+} & Fethaa+) or (Sethaa- & {SE***g+})));
-bótar.n: (({[[@Aevga-]]} & SEetvga-) or (({[[@Aevga-]]} & (({SE***g+} & Fetvga+) or (Setvga- & {SE***g+})))));
-bóta.n: (({[[@Afvga-]]} & SEftvga-) or (({[[@Afvga-]]} & (({SE***g+} & Fftvga+) or (Sftvga- & {SE***g+})))));
-bæturnar.n: ({[[@Afvno-]]} & (({SE***g+} & Fftvno+) or (Sftvno- & {SE***g+}))) or ({[[@Afvdo-]]} & (({SE***g+} & Fftvdo+) or (Sftvdo- & {SE***g+})));
-bót.n: ({[[@Aevna-]]} & (({SE***g+} & Fetvna+) or (Setvna- & {SE***g+}))) or ({[[@Aevda-]]} & (({SE***g+} & Fetvda+) or (Setvda- & {SE***g+}))) or ({[[@Aevaa-]]} & (({SE***g+} & Fetvaa+) or (Setvaa- & {SE***g+})));
-bótunum.n: ({[[@Afvao-]]} & (({SE***g+} & Fftvao+) or (Sftvao- & {SE***g+})));
-bótanna.n: (({[[@Afvgo-]]} & SEftvgo-) or (({[[@Afvgo-]]} & (({SE***g+} & Fftvgo+) or (Sftvgo- & {SE***g+})))));
-bótin.n: ({[[@Aevno-]]} & (({SE***g+} & Fetvno+) or (Setvno- & {SE***g+})));
-bótina.n: ({[[@Aevdo-]]} & (({SE***g+} & Fetvdo+) or (Setvdo- & {SE***g+})));
-bótum.n: ({[[@Afvaa-]]} & (({SE***g+} & Fftvaa+) or (Sftvaa- & {SE***g+})));
-bætur.n: ({[[@Afvna-]]} & (({SE***g+} & Fftvna+) or (Sftvna- & {SE***g+}))) or ({[[@Afvda-]]} & (({SE***g+} & Fftvda+) or (Sftvda- & {SE***g+})));
-bótinni.n: ({[[@Aevao-]]} & (({SE***g+} & Fetvao+) or (Setvao- & {SE***g+})));
-bótarinnar.n: (({[[@Aevgo-]]} & SEetvgo-) or (({[[@Aevgo-]]} & (({SE***g+} & Fetvgo+) or (Setvgo- & {SE***g+})))));
-fjölskyldur.n: ({[[@Afvna-]]} & (({SE***g+} & Fftvna+) or (Sftvna- & {SE***g+}))) or ({[[@Afvda-]]} & (({SE***g+} & Fftvda+) or (Sftvda- & {SE***g+})));
-fjölskyldum.n: ({[[@Afvaa-]]} & (({SE***g+} & Fftvaa+) or (Sftvaa- & {SE***g+})));
-fjölskyldurnar.n: ({[[@Afvno-]]} & (({SE***g+} & Fftvno+) or (Sftvno- & {SE***g+}))) or ({[[@Afvdo-]]} & (({SE***g+} & Fftvdo+) or (Sftvdo- & {SE***g+})));
-fjölskyldunum.n: ({[[@Afvao-]]} & (({SE***g+} & Fftvao+) or (Sftvao- & {SE***g+})));
-fjölskylduna.n: ({[[@Aevdo-]]} & (({SE***g+} & Fetvdo+) or (Setvdo- & {SE***g+})));
-fjölskyldna.n: (({[[@Afvga-]]} & SEftvga-) or (({[[@Afvga-]]} & (({SE***g+} & Fftvga+) or (Sftvga- & {SE***g+})))));
-fjölskylda.n: ({[[@Aevna-]]} & (({SE***g+} & Fetvna+) or (Setvna- & {SE***g+})));
-fjölskyldunni.n: ({[[@Aevao-]]} & (({SE***g+} & Fetvao+) or (Setvao- & {SE***g+})));
-fjölskyldan.n: ({[[@Aevno-]]} & (({SE***g+} & Fetvno+) or (Setvno- & {SE***g+})));
-fjölskyldnanna.n: (({[[@Afvgo-]]} & SEftvgo-) or (({[[@Afvgo-]]} & (({SE***g+} & Fftvgo+) or (Sftvgo- & {SE***g+})))));
-fjölskyldu.n: ({[[@Aevda-]]} & (({SE***g+} & Fetvda+) or (Setvda- & {SE***g+}))) or ({[[@Aevaa-]]} & (({SE***g+} & Fetvaa+) or (Setvaa- & {SE***g+}))) or (({[[@Aevga-]]} & SEetvga-) or (({[[@Aevga-]]} & (({SE***g+} & Fetvga+) or (Setvga- & {SE***g+})))));
-fjölskyldunnar.n: (({[[@Aevgo-]]} & SEetvgo-) or (({[[@Aevgo-]]} & (({SE***g+} & Fetvgo+) or (Setvgo- & {SE***g+})))));
-hryðjuverkamanninn.n: ({[[@Aekdo-]]} & (({SE***g+} & Fetkdo+) or (Setkdo- & {SE***g+})));
-hryðjuverkamannanna.n: (({[[@Afkgo-]]} & SEftkgo-) or (({[[@Afkgo-]]} & (({SE***g+} & Fftkgo+) or (Sftkgo- & {SE***g+})))));
-hryðjuverkamönnunum.n: ({[[@Afkao-]]} & (({SE***g+} & Fftkao+) or (Sftkao- & {SE***g+})));
-hryðjuverkamanns.n: (({[[@Aekga-]]} & SEetkga-) or (({[[@Aekga-]]} & (({SE***g+} & Fetkga+) or (Setkga- & {SE***g+})))));
-hryðjuverkamaður.n: ({[[@Aekna-]]} & (({SE***g+} & Fetkna+) or (Setkna- & {SE***g+})));
-hryðjuverkamennina.n: ({[[@Afkdo-]]} & (({SE***g+} & Fftkdo+) or (Sftkdo- & {SE***g+})));
-hryðjuverkamann.n: ({[[@Aekda-]]} & (({SE***g+} & Fetkda+) or (Setkda- & {SE***g+})));
-hryðjuverkamennirnir.n: ({[[@Afkno-]]} & (({SE***g+} & Fftkno+) or (Sftkno- & {SE***g+})));
-hryðjuverkamaðurinn.n: ({[[@Aekno-]]} & (({SE***g+} & Fetkno+) or (Setkno- & {SE***g+})));
-hryðjuverkamönnum.n: ({[[@Afkaa-]]} & (({SE***g+} & Fftkaa+) or (Sftkaa- & {SE***g+})));
-hryðjuverkamanni.n: ({[[@Aekaa-]]} & (({SE***g+} & Fetkaa+) or (Setkaa- & {SE***g+})));
-hryðjuverkamanninum.n: ({[[@Aekao-]]} & (({SE***g+} & Fetkao+) or (Setkao- & {SE***g+})));
-hryðjuverkamannsins.n: (({[[@Aekgo-]]} & SEetkgo-) or (({[[@Aekgo-]]} & (({SE***g+} & Fetkgo+) or (Setkgo- & {SE***g+})))));
-hryðjuverkamenn.n: ({[[@Afkna-]]} & (({SE***g+} & Fftkna+) or (Sftkna- & {SE***g+}))) or ({[[@Afkda-]]} & (({SE***g+} & Fftkda+) or (Sftkda- & {SE***g+})));
-hryðjuverkamanna.n: (({[[@Afkga-]]} & SEftkga-) or (({[[@Afkga-]]} & (({SE***g+} & Fftkga+) or (Sftkga- & {SE***g+})))));
-hundunum.n: ({[[@Afkao-]]} & (({SE***g+} & Fftkao+) or (Sftkao- & {SE***g+})));
-hundinum.n: ({[[@Aekao-]]} & (({SE***g+} & Fetkao+) or (Setkao- & {SE***g+})));
-hundanna.n: (({[[@Afkgo-]]} & SEftkgo-) or (({[[@Afkgo-]]} & (({SE***g+} & Fftkgo+) or (Sftkgo- & {SE***g+})))));
-hunds.n: (({[[@Aekga-]]} & SEetkga-) or (({[[@Aekga-]]} & (({SE***g+} & Fetkga+) or (Setkga- & {SE***g+})))));
-hundarnir.n: ({[[@Afkno-]]} & (({SE***g+} & Fftkno+) or (Sftkno- & {SE***g+})));
-hunda.n: ({[[@Afkda-]]} & (({SE***g+} & Fftkda+) or (Sftkda- & {SE***g+}))) or (({[[@Afkga-]]} & SEftkga-) or (({[[@Afkga-]]} & (({SE***g+} & Fftkga+) or (Sftkga- & {SE***g+})))));
-hundurinn.n: ({[[@Aekno-]]} & (({SE***g+} & Fetkno+) or (Setkno- & {SE***g+})));
-hundana.n: ({[[@Afkdo-]]} & (({SE***g+} & Fftkdo+) or (Sftkdo- & {SE***g+})));
-hundsins.n: (({[[@Aekgo-]]} & SEetkgo-) or (({[[@Aekgo-]]} & (({SE***g+} & Fetkgo+) or (Setkgo- & {SE***g+})))));
-hund.n: ({[[@Aekda-]]} & (({SE***g+} & Fetkda+) or (Setkda- & {SE***g+})));
-hundar.n: ({[[@Afkna-]]} & (({SE***g+} & Fftkna+) or (Sftkna- & {SE***g+})));
-hundinn.n: ({[[@Aekdo-]]} & (({SE***g+} & Fetkdo+) or (Setkdo- & {SE***g+})));
-hundur.n: ({[[@Aekna-]]} & (({SE***g+} & Fetkna+) or (Setkna- & {SE***g+})));
-hundum.n: ({[[@Afkaa-]]} & (({SE***g+} & Fftkaa+) or (Sftkaa- & {SE***g+})));
-hundi.n: ({[[@Aekaa-]]} & (({SE***g+} & Fetkaa+) or (Setkaa- & {SE***g+})));
-grunaðar.l: Afvnan+ or BAfvnan- or Afvdan+ or BAfvdan-;
-grunaði.l: Aeknon+ or BAeknon-;
-grunaðir.l: Afknan+ or BAfknan-;
-grunaður.l: Aeknan+ or BAeknan-;
-grunaða.l: Aevdan+ or BAevdan- or Afkdan+ or BAfkdan- or Aekdon+ or BAekdon- or Aekaon+ or BAekaon- or Aekgon+ or BAekgon- or Aevnon+ or BAevnon- or Aehnon+ or BAehnon- or Aehdon+ or BAehdon- or Aehaon+ or BAehaon- or Aehgon+ or BAehgon-;
-grunuðu.l: Aehaan+ or BAehaan- or Aevdon+ or BAevdon- or Aevaon+ or BAevaon- or Aevgon+ or BAevgon- or Afknon+ or BAfknon- or Afkdon+ or BAfkdon- or Afkaon+ or BAfkaon- or Afkgon+ or BAfkgon- or Afvnon+ or BAfvnon- or Afvdon+ or BAfvdon- or Afvaon+ or BAfvaon- or Afvgon+ or BAfvgon- or Afhnon+ or BAfhnon- or Afhdon+ or BAfhdon- or Afhaon+ or BAfhaon- or Afhgon+ or BAfhgon-;
-grunaðs.l: Aekgan+ or BAekgan- or Aehgan+ or BAehgan-;
-grunaðrar.l: Aevgan+ or BAevgan-;
-grunað.l: Aehnan+ or BAehnan- or Aehdan+ or BAehdan-;
-grunaðan.l: Aekdan+ or BAekdan-;
-grunaðri.l: Aevaan+ or BAevaan-;
-grunuðum.l: Aekaan+ or BAekaan- or Afkaan+ or BAfkaan- or Afvaan+ or BAfvaan- or Afhaan+ or BAfhaan-;
-grunaðra.l: Afkgan+ or BAfkgan- or Afvgan+ or BAfvgan- or Afhgan+ or BAfhgan-;
-grunuð.l: Aevnan+ or BAevnan- or Afhnan+ or BAfhnan- or Afhdan+ or BAfhdan-;
-vondri.l: Aevaan+ or BAevaan-;
-vont.l: Aehnan+ or BAehnan- or Aehdan+ or BAehdan-;
-vonda.l: Aevdan+ or BAevdan- or Afkdan+ or BAfkdan- or Aekdon+ or BAekdon- or Aekaon+ or BAekaon- or Aekgon+ or BAekgon- or Aevnon+ or BAevnon- or Aehnon+ or BAehnon- or Aehdon+ or BAehdon- or Aehaon+ or BAehaon- or Aehgon+ or BAehgon-;
-versti.l: Aeknoe+ or BAeknoe-;
-versta.l: Aevdae+ or BAevdae- or Afkdae+ or BAfkdae- or Aekdoe+ or BAekdoe- or Aekaoe+ or BAekaoe- or Aekgoe+ or BAekgoe- or Aevnoe+ or BAevnoe- or Aehnoe+ or BAehnoe- or Aehdoe+ or BAehdoe- or Aehaoe+ or BAehaoe- or Aehgoe+ or BAehgoe-;
-verstan.l: Aekdae+ or BAekdae-;
-vondir.l: Afknan+ or BAfknan-;
-verstrar.l: Aevgae+ or BAevgae-;
-vondum.l: Aekaan+ or BAekaan- or Afkaan+ or BAfkaan- or Afvaan+ or BAfvaan- or Afhaan+ or BAfhaan-;
-verra.l: Aehno*+ or BAehno*- or Aehdo*+ or BAehdo*- or Aehao*+ or BAehao*- or Aehgo*+ or BAehgo*-;
-verstir.l: Afknae+ or BAfknae-;
-verstra.l: Afkgae+ or BAfkgae- or Afvgae+ or BAfvgae- or Afhgae+ or BAfhgae-;
-verstar.l: Afvnae+ or BAfvnae- or Afvdae+ or BAfvdae-;
-vondu.l: Aehaan+ or BAehaan- or Aevdon+ or BAevdon- or Aevaon+ or BAevaon- or Aevgon+ or BAevgon- or Afknon+ or BAfknon- or Afkdon+ or BAfkdon- or Afkaon+ or BAfkaon- or Afkgon+ or BAfkgon- or Afvnon+ or BAfvnon- or Afvdon+ or BAfvdon- or Afvaon+ or BAfvaon- or Afvgon+ or BAfvgon- or Afhnon+ or BAfhnon- or Afhdon+ or BAfhdon- or Afhaon+ or BAfhaon- or Afhgon+ or BAfhgon-;
-vond.l: Aevnan+ or BAevnan- or Afhnan+ or BAfhnan- or Afhdan+ or BAfhdan-;
-vondur.l: Aeknan+ or BAeknan-;
-verstu.l: Aehaae+ or BAehaae- or Aevdoe+ or BAevdoe- or Aevaoe+ or BAevaoe- or Aevgoe+ or BAevgoe- or Afknoe+ or BAfknoe- or Afkdoe+ or BAfkdoe- or Afkaoe+ or BAfkaoe- or Afkgoe+ or BAfkgoe- or Afvnoe+ or BAfvnoe- or Afvdoe+ or BAfvdoe- or Afvaoe+ or BAfvaoe- or Afvgoe+ or BAfvgoe- or Afhnoe+ or BAfhnoe- or Afhdoe+ or BAfhdoe- or Afhaoe+ or BAfhaoe- or Afhgoe+ or BAfhgoe-;
-verstri.l: Aevaae+ or BAevaae-;
-vondi.l: Aeknon+ or BAeknon-;
-vondrar.l: Aevgan+ or BAevgan-;
-versts.l: Aekgae+ or BAekgae- or Aehgae+ or BAehgae-;
-vondan.l: Aekdan+ or BAekdan-;
-verri.l: Aekno*+ or BAekno*- or Aekdo*+ or BAekdo*- or Aekao*+ or BAekao*- or Aekgo*+ or BAekgo*- or Aevno*+ or BAevno*- or Aevdo*+ or BAevdo*- or Aevao*+ or BAevao*- or Aevgo*+ or BAevgo*- or Afkno*+ or BAfkno*- or Afkdo*+ or BAfkdo*- or Afkao*+ or BAfkao*- or Afkgo*+ or BAfkgo*- or Afvno*+ or BAfvno*- or Afvdo*+ or BAfvdo*- or Afvao*+ or BAfvao*- or Afvgo*+ or BAfvgo*- or Afhno*+ or BAfhno*- or Afhdo*+ or BAfhdo*- or Afhao*+ or BAfhao*- or Afhgo*+ or BAfhgo*-;
-vonds.l: Aekgan+ or BAekgan- or Aehgan+ or BAehgan-;
-vondar.l: Afvnan+ or BAfvnan- or Afvdan+ or BAfvdan-;
-verstur.l: Aeknae+ or BAeknae-;
-verstum.l: Aekaae+ or BAekaae- or Afkaae+ or BAfkaae- or Afvaae+ or BAfvaae- or Afhaae+ or BAfhaae-;
-vondra.l: Afkgan+ or BAfkgan- or Afvgan+ or BAfvgan- or Afhgan+ or BAfhgan-;
-verst.l: Aevnae+ or BAevnae- or Aehnae+ or BAehnae- or Aehdae+ or BAehdae- or Afhnae+ or BAfhnae- or Afhdae+ or BAfhdae-;

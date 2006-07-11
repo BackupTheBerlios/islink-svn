@@ -10,7 +10,7 @@ def make_no(inf):
   elif kyn == 'hk':
     kyn = 'h'
   
-  foll = ['n', 'd', 'a', 'g']
+  foll = ['n', 'a', 'd', 'g']
   akvednir = ['a', 'o']
   tolur = ['e', 'f']
   

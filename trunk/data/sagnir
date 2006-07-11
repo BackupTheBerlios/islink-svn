@@ -1,45 +1,45 @@
-grípa.sb	n	x,d	niğur í,d	í,d	fram í fyrir,a	inn í,d	til,g	um sig,x	á,a	fyrir,d	undir,d
-minna.vb	d	d
-minna á.vb	n	d-d
+grípa.sb	n	x,a	niğur í,a	í,a	fram í fyrir,d	inn í,a	til,g	um sig,x	á,d	fyrir,a	undir,a
+minna.vb	a	a
+minna á.vb	n	a-a
 
-borğa.v	n	x,d
-borga.vb	n	x,d,a,a-d	sig,x	inn á,d	undir,d	úr,a	út,d
-brjóta.sb	n	x,d,a-d	af,a	á,d	á móti,a	niğur,d	saman,d	upp,d
-deyja.sb	n	x,a
-elska.vb	n	x,d
-eyğa.vb	n	a
-geyma.vb	n	d
-hafna.vb	n	a
-hefna.vb	n	g	fyrir,d
-hlığa.vb	n	x,a	á,d
-hreinsa.vb	n	d	til,x
-hrökkva.sb	n	x,d	til,xg	fyrir,a	af,a	út af,a	af,a	í,d	saman,x	upp af,xa	upp,x	úr,xa	undan,xa
-höggva.sb	n	x,d	á,d	í,d	af,d	til,d
-játa.vb	n	x,d,a-d
-klappa.vb	n	x,a	saman,a	fyrir,a
-kúga.vb	n	d
-kyssa.vb	n	x,d	á,d
-lúta.sb	n	x,d	í,d	undir,d	ağ,a
-mála.vb	n	x,d	á,d
-rugla.vb	n	x,d,a	í,a	saman,a
-skoğa.vb	n	d	í,d	til,xg	upp í,d
-spretta.vb	n	x,d	á,d
-spretta.sb	n	g	úr,a	upp,xa	fram,n
-styğja.vb	n	d	á,d	í,d	viğ,d	ağ,a
-stökkva.vb	n	x,a
-stökkva.sb	n	x	burt,x	af,a	á,d	í,d	viğ,d
+borğa.v	n	x,a
+borga.vb	n	x,a,d,d-a	sig,x	inn á,a	undir,a	úr,d	út,a
+brjóta.sb	n	x,a,d-a	af,d	á,a	á móti,d	niğur,a	saman,a	upp,a
+deyja.sb	n	x,d
+elska.vb	n	x,a
+eyğa.vb	n	d
+geyma.vb	n	a
+hafna.vb	n	d
+hefna.vb	n	g	fyrir,a
+hlığa.vb	n	x,d	á,a
+hreinsa.vb	n	a	til,x
+hrökkva.sb	n	x,a	til,xg	fyrir,d	af,d	út af,d	af,d	í,a	saman,x	upp af,xa	upp,x	úr,xa	undan,xa
+höggva.sb	n	x,a	á,a	í,a	af,a	til,a
+játa.vb	n	x,a,d-a
+klappa.vb	n	x,d	saman,d	fyrir,d
+kúga.vb	n	a
+kyssa.vb	n	x,a	á,a
+lúta.sb	n	x,a	í,a	undir,a	ağ,d
+mála.vb	n	x,a	á,a
+rugla.vb	n	x,a,d	í,d	saman,d
+skoğa.vb	n	a	í,a	til,xg	upp í,a
+spretta.vb	n	x,a	á,a
+spretta.sb	n	g	úr,d	upp,xa	fram,n
+styğja.vb	n	a	á,a	í,a	viğ,a	ağ,d
+stökkva.vb	n	x,d
+stökkva.sb	n	x	burt,x	af,d	á,a	í,a	viğ,a
 stökkva.sb	a	n
-synda.vb	n	x,d
-syngja.sb	n	x,a-d,d,a	í,d	inn á,d	fyrir,d	meğ,a	á,a	fyrir,a
-tefla.vb	n	x,d,a	fram,a	á,d	viğ,d	um,d
-trufla.vb	n	x,d
-trúa.vb	n	x,a	á,d
-tına.vb	n	a
-valda.vb	n	d
-valda.sb	n	a,a-a
-vaxa.sb	n	x,a	úr,a	yfir,d	upp viğ,d	upp,x
-verja.vb	n	x,d,a
-vitna.vb	n	x,d	fyrir,a	um,d	til um,d	í,d	gegn,a	um,d	til,g	á móti,a
-şakka.vb	n	x,d-a,d,a	fyrir,d
-şiggja.sb	n	d	af,a	meğ,a
-şjóna.sb	n	a	til,g	undir,a
+synda.vb	n	x,a
+syngja.sb	n	x,d-a,a,d	í,a	inn á,a	fyrir,a	meğ,d	á,d	fyrir,d
+tefla.vb	n	x,a,d	fram,d	á,a	viğ,a	um,a
+trufla.vb	n	x,a
+trúa.vb	n	x,d	á,a
+tına.vb	n	d
+valda.vb	n	a
+valda.sb	n	d,d-d
+vaxa.sb	n	x,d	úr,d	yfir,a	upp viğ,a	upp,x
+verja.vb	n	x,a,d
+vitna.vb	n	x,a	fyrir,d	um,a	til um,a	í,a	gegn,d	um,a	til,g	á móti,d
+şakka.vb	n	x,a-d,a,d	fyrir,a
+şiggja.sb	n	a	af,d	meğ,d
+şjóna.sb	n	d	til,g	undir,d
