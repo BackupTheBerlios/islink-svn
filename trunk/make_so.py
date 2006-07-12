@@ -19,10 +19,70 @@ class Sagnord:
 #    return foll
 
 def codeFS(fs):
-  if fs == 'niður í':
-    return NIDUR_I
   if fs == 'á':
-    return NIDUR_I
+    return "SA"
+  elif fs == 'í':
+    return 'SI'
+  elif fs == 'niður í':
+    return 'SNIDURI'
+  elif fs == 'fram í fyrir':
+    return 'SFRAMIFYRIR'
+  elif fs == 'inn í':
+    return 'SINNI'
+  elif fs == 'til':
+    return 'STIL'
+  elif fs == 'um sig':
+    return 'SUMSIG'
+  elif fs == 'fyrir':
+    return 'SFYRIR'
+  elif fs == 'undir':
+    return 'SUNDIR'
+  elif fs == 'sig':
+    return 'SSIG'
+  elif fs == 'inn á':
+    return 'SINNA'
+  elif fs == 'úr':
+    return 'SUR'
+  elif fs == 'út':
+    return 'SUT'
+  elif fs == 'á móti':
+    return 'SAMOTI'
+  elif fs == 'niður':
+    return 'SNIDUR'
+  elif fs == 'saman':
+    return 'SSAMAN'
+  elif fs == 'upp':
+    return 'SUPP'
+  elif fs == 'af':
+    return 'SAF'
+  elif fs == 'út af':
+    return 'SUTAF'
+  elif fs == 'upp af':
+    return 'SUPPAF'
+  elif fs == 'undan':
+    return 'SUNDAN'
+  elif fs == 'að':
+    return 'SAD'
+  elif fs == 'upp í':
+    return 'SUPPI'
+  elif fs == 'fram':
+    return 'SFRAM'
+  elif fs == 'burt':
+    return 'SBURT'
+  elif fs == 'við':
+    return 'SVID'
+  elif fs == 'með':
+    return 'SMED'
+  elif fs == 'um':
+    return 'SUM'
+  elif fs == 'yfir':
+    return 'SYFIR'
+  elif fs == 'upp við':
+    return 'SUPPVID'
+  elif fs == 'til um':
+    return 'STILUM'
+  elif fs == 'gegn':
+    return 'SGEGN'
   else:
     print 'Unknown forsetning "%s"' % fs
     assert False
@@ -32,6 +92,7 @@ def append(str, x, sep):
     str = x
   else:
     str = '%s %s %s' % (str, sep, x)
+  return str
 
 def lesaUpplysingar(f):
   uppl = dict()
@@ -63,12 +124,12 @@ def handleGermynd(myndir, inf, uppl, beyging):
           if th == 'x':
             optional = True
           elif len(th) == 1:
-            append(andlag, 'S***%s+' % th, 'or')
+            andlag = append(andlag, 'S***%s+' % th, 'or')
           else:
-            assert len(th == 3)
-            append(andlag, '(S***%s+ & S***%s+)' % (th[0], th[2]), 'or')
+            assert len(th) == 3
+            andlag = append(andlag, '(S***%s+ & S***%s+)' % (th[0], th[2]), 'or')
 
-        if optional:
+        if optional and andlag != '':
           andlag = '{%s}' % andlag
 
         for ss in uppl.samsett:
@@ -81,41 +142,33 @@ def handleGermynd(myndir, inf, uppl, beyging):
             else:
               assert len(th) == 1
 
-              append(andl, 'S***%s+' % th, 'or')
+              andl = append(andl, 'S***%s+' % th, 'or')
 
           if andl == '':
-            append(andlag, '%s', cfs)
+            andl = append(andlag, '%s+', cfs)
           else:
-            if optinal:
+            if optional:
               andl = '{%s}' % andl
             else:
               andl = '(%s)' % andl
 
-            append(andlag, '(%s & %s)' % (cfs, andl), 'or')
+            andlag = append(andlag, '(%s+ & %s)' % (cfs, andl), 'or')
 
-        gefur = 'F%s%s*n- & {E+} & (%s) & {@IK+}' % (tala, persona, andlag)
+        gefur = '(F%s%s*n- & {E+} & (%s) & {@IK+})' % (tala, persona, andlag)
 
         if ord in myndir:
           myndir[ord] = '%s or %s' % (myndir[ord], gefur)
         else:
           myndir[ord] = gefur
 
-def make_so(f, upplysingar):
+
+def make_so(myndir, f, upplysingar):
   fs = re.split('\.', f)
   beyging = fs[len(fs) - 1]
 
-  myndir = dict()
-
   inf = file(f, 'r')
   nh = re.split('\n', inf.readline())[0]
-  print nh
   sogn = "%s.%s" % (nh, beyging)
-  print sogn
-
-  if upplysingar.has_key('mála.vb'):
-    print "hk1"
-  if upplysingar.has_key('kyssa.vb'):
-    print "hk2"
 
   if upplysingar.has_key(sogn):
     uppl = upplysingar[sogn]
@@ -123,15 +176,18 @@ def make_so(f, upplysingar):
     handleGermynd(myndir, inf, uppl, beyging)
   else:
     print "%s not found" % sogn
-    print upplysingar
     assert False
 
-  for mynd in myndir:
-    print "%s: %s;" % (mynd, myndir[mynd])
+
 
 if __name__ == '__main__':
   # usage: make_so
   upplysingar = lesaUpplysingar('data/sagnir')
 
+  myndir = dict()
+
   for f in sys.argv[1:]:
-    make_so(f, upplysingar)
+    make_so(myndir, f, upplysingar)
+
+  for mynd in myndir:
+    print "%s: %s;" % (mynd, myndir[mynd])
