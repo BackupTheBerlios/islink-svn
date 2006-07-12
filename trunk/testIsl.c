@@ -49,7 +49,7 @@ int main() {
 
   test("hundur borðar", dict, opts, TRUE);
   test("hundur er vondur", dict, opts, TRUE);
-  test("hundurinn er vondi", dict, opts, TRUE);
+  test("hundurinn er vondi", dict, opts, FALSE);
   test("hundur er vondi", dict, opts, FALSE);
 
   test("fjölskyldur fá bætur", dict, opts, TRUE);

@@ -1,12 +1,13 @@
-grípa.sb	n	x,a	niður í,a	í,a	fram í fyrir,d	inn í,a	til,g	um sig,x	á,d	fyrir,a	undir,a
+grípa.sb	n	a	niður í,a	í,a	fram í fyrir,d	inn í,a	til,g	um sig,x	á,d	fyrir,a	undir,a
 minna.vb	n	x,a	á,a
 
 borða.vb	n	x,a
-borga.vb	n	x,a,d,d-a	sig,x	inn á,a	undir,a	úr,d	út,a
-brjóta.sb	n	x,a,d-a	af,d	á,a	á móti,d	niður,a	saman,a	upp,a
+borga.vb	n	a,d,d-a	sig,x	inn á,a	undir,a	úr,d	út,a
+brjóta.sb	n	a,d-a	af,d	á,a	á móti,d	niður,a	saman,a	upp,a
 deyja.sb	n	x,d
-elska.vb	n	x,a
+elska.vb	n	a
 eyða.vb	n	d
+fá.sb	n	a	á,x,a
 geyma.vb	n	a
 hafna.vb	n	d
 hefna.vb	n	g	fyrir,a

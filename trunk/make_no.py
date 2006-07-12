@@ -1,7 +1,9 @@
+#!/usr/bin/python
+
 import re
 import sys
 
-def make_no(inf):
+def make_no(myndir, inf):
   kyn = re.split('\W+', inf.readline())[0]
   if kyn == 'kk':
     kyn = 'k'
@@ -11,26 +13,28 @@ def make_no(inf):
     kyn = 'h'
 
   foll = ['n', 'a', 'd', 'g']
-  akvednir = ['a', 'o']
+  akvednir = ['o', 'a']
   tolur = ['e', 'f']
 
-  myndir = dict()
   for tala in tolur:
     for akvedni in akvednir:
       for fall in foll:
         ord = '%s.n' % re.split('\n', inf.readline())[0]
         stada = '%st%s%s%s' % (tala, kyn, fall, akvedni)
-        gefur = '({[[@A%s%s%s%s-]]} & (({SE***g+} & F%s+) or (S%s- & {SE***g+})))' % (tala, kyn, fall, akvedni, stada, stada)
+        gefur = '({[[@A%s%s%s%s-]]} & (({S***g+} & F%s+) or (S%s- & {S***g+})))' % (tala, kyn, fall, akvedni, stada, stada)
 	if fall == 'g':
-          gefur = '(({[[@A%s%s%s%s-]]} & SE%s-) or (%s))' % (tala, kyn, fall, akvedni, stada, gefur)
+          gefur = '(({[[@A%s%s%s%s-]]} & S%s-) or (%s))' % (tala, kyn, fall, akvedni, stada, gefur)
         if ord in myndir:
           myndir[ord] = '%s or %s' % (myndir[ord], gefur)
         else:
           myndir[ord] = gefur
 
-  for mynd in myndir:
-    print "%s: %s;" % (mynd, myndir[mynd])
 
 if __name__ == '__main__':
+  myndir = dict()
+
   for f in sys.argv[1:]:
-    make_no(file(f, 'r'))
+    make_no(myndir, file(f, 'r'))
+
+  for mynd in myndir:
+    print "%s: %s;" % (mynd, myndir[mynd])

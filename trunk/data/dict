@@ -17,11 +17,7 @@
 % IK = forsetningarliður, eða atviksorð, sem tákna hreyfingu
 % IH = hreyfing
 
-%%%%%%borðar.v: Fet*n*- & {E+} & {S***a+} & {IK+};
-%%%%%%borða.v: Fft*n*- & {E+} & {S***a+} & {IK+};
-%%%%%%fá.v: Fft*n*- & {E+} & S***d+ & {Ik+};
-
-er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkna- & {E+} & BAekna*+) or (Fetvna- & {E+} & BAevna*+) or (Fethna- & {E+} & BAehna*+)  or (Fetkno- & {E+} & BAekno*+) or (Fetvno- & {E+} & BAevno*+) or (Fethno- & {E+} & BAehno*+)) & {IK+};
+er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkno- & {E+} & BAekno*+) or (Fetvno- & {E+} & BAevno*+) or (Fethno- & {E+} & BAehno*+)) & {IK+};
 
 ekki.a: E-;
 
@@ -50,8 +46,8 @@ til.f: IK- & S***g+;
 % og geta ekki staðið með hreyfingu
 handan.f innan.f austan.f neðan.f norðan.f ofan.f sunnan.f vestan.f utan.f millum.f: IH- & S***g+;
 
-á.f í.f undir.f yfir.f: (IK- & S***a+) or (IH- & S***d+);
-með.f fyrir.f við.f: IH- & (S***a+ & S***d+);
+á.f í.f undir.f yfir.f: (IK- & S***d+) or (IH- & S***a+);
+með.f fyrir.f við.f: IH- & (S***d+ & S***a+);
 
 
 

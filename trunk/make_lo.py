@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import re
 import sys
 
@@ -12,14 +14,12 @@ def lesaLinu(inf, myndir, akvedni, tala, kyn, fall, st):
       myndir[ord] = gefur
 
 
-def make_lo(inf):  
+def make_lo(myndir, inf):
   kyn = ['k', 'v', 'h']
   foll = ['n', 'a', 'd', 'g']
-  akvednir = ['a', 'o']
+  akvednir = ['o', 'a']
   tolur = ['e', 'f']
   stig = ['n', 'm', 'e']
-  
-  myndir = dict()
 
   for akvedni in akvednir:
     for tala in tolur:
@@ -38,10 +38,12 @@ def make_lo(inf):
         for fall in foll:
           lesaLinu(inf, myndir, akvedni, tala, k, fall, "e")
 
-  for mynd in myndir:
-    print "%s: %s;" % (mynd, myndir[mynd])
-
 
 if __name__ == '__main__':
+  myndir = dict()
+
   for f in sys.argv[1:]:
-    make_lo(file(f, 'r'))
+    make_lo(myndir, file(f, 'r'))
+
+  for mynd in myndir:
+    print "%s: %s;" % (mynd, myndir[mynd])
