@@ -9,17 +9,20 @@
 % kyn: k / v / h
 % fall: n / a / d / g
 % ákveðni: a / o
-% stig: n / m / e
+% stig: f / m / e
 %
+% AS = atviksorð sem geta lýst öllum sögnum
+% AL = atviksorð sem geta lýst öðrum sögnum/atviksorðum
+% AE = ekki
 % F = frumlag
-% S = andlag
-% E = ekki
 % IK = forsetningarliður, eða atviksorð, sem tákna hreyfingu
 % IH = hreyfing
+% L = lýsingarorð
+% LS = sjálfstætt lýsingarorð
+% S = andlag
+% T* = forsetning sem er hluti af sögn
 
-er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkno- & {E+} & BAekno*+) or (Fetvno- & {E+} & BAevno*+) or (Fethno- & {E+} & BAehno*+)) & {IK+};
-
-ekki.a: E-;
+er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkno- & {E+} & LSekno*+) or (Fetvno- & {E+} & LSevno*+) or (Fethno- & {E+} & LSehno*+)) & {IK+};
 
 % Forsetningar
 
@@ -54,38 +57,85 @@ með.f fyrir.f við.f: IH- & (S***d+ & S***a+);
 %mala: Fef*n*- & {E+} & (S***d+ or (NIDUR_I+ & S***a+) & {@IK+};
 
 % botnar samsettra sagna:
-á.sf: SA-;
-í.sf: SI-;
-niður_í: SNIDURI-;
-fram_í_fyrir: SFRAMIFYRIR-;
-inn_í: SINNI-;
-til.sf: STIL-;
-um_sig: SUMSIG-;
-fyrir.sf: SFYRIR-;
-undir.sf: SUNDIR-;
-sig.sf: SSIG-;
-inn_á: SINNA-;
-úr.sf: SUR-;
-út.sf: SUT-;
-á_móti: SAMOTI-;
-niður.sf: SNIDUR-;
-saman.sf: SSAMAN-;
-upp.sf: SUPP-;
-af.sf: SAF-;
-út_af: SUTAF-;
-upp_af: SUPPAF-;
-undan.sf: SUNDAN-;
-að.sf: SAD-;
-upp_í: SUPPI-;
-fram.sf: SFRAM-;
-burt.sf: SBURT-;
-við.sf: SVID-;
-með.sf: SMED-;
-um.sf: SUM-;
-yfir.sf: SYFIR-;
-upp_við: SUPPVID-;
-til_um: STILUM-;
-gegn.sf: SGEGN-;
+á.sf: TA-;
+í.sf: TI-;
+niður_í: TNIDURI-;
+fram_í_fyrir: TFRAMIFYRIR-;
+inn_í: TINNI-;
+til.sf: TTIL-;
+um_sig: TUMSIG-;
+fyrir.sf: TFYRIR-;
+undir.sf: TUNDIR-;
+sig.sf: TSIG-;
+inn_á: TINNA-;
+úr.sf: TUR-;
+út.sf: TUT-;
+á_móti: TAMOTI-;
+niður.sf: TNIDUR-;
+saman.sf: TSAMAN-;
+upp.sf: TUPP-;
+af.sf: TAF-;
+út_af: TUTAF-;
+upp_af: TUPPAF-;
+undan.sf: TUNDAN-;
+að.sf: TAD-;
+upp_í: TUPPI-;
+fram.sf: TFRAM-;
+burt.sf: TBURT-;
+við.sf: TVID-;
+með.sf: TMED-;
+um.sf: TUM-;
+yfir.sf: TYFIR-;
+upp_við: TUPPVID-;
+til_um: TTILUM-;
+gegn.sf: TGEGN-;
+
+
+% Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í frumstig
+afar býsna fremur harla mjög ansi: ALf+;
+% Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í miðstig
+mun miklu aðeins dálítið talsvert umtalsvert svolítið langtum: ALm+;
+% Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í efsta stig
+lang: ALe+;
+
+
+
+% Atviksorð sem lýsa sögnum
+% tímasetningar sem lýsa sögnum
+aldrei bráðum
+
+lengi, nú, núna, nýlega, seinna, þá	x
+
+
+afar, fljótt, hratt, hægt, illa, lítt, mjög, svo, svona, vel, þannig 
+hljótt hljóðar hljóðast 
+seint seinlega
+
+hvaðan, hvar, hvenær, hvernig, hvert
+
+
+
+fallega bráðlega ljótt fullkomlega algjörlega
+
+vel.a betur.a best.a
+hratt.a hraðar.a hraðast.a
+hægt.a hægar.a hægast.a
+beint.a beinar.a beinast.a
+þráðbeint.a
+illa.a ver.a verst.a
+aftur.a aftar.a aftast.a
+lengi.a lengur.a lengst.a
+inn.a innar.a innst.a
+mikið meira mest
+lítið minna minnst
+
+
+% önnur atviksorð
+ekki.a: E-;
+% já nei
+
+
+ AL
 
 % sagnorð í nafnhætti:
 % sagnorð í lýsingarhætti þátíðar:

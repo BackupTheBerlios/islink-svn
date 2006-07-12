@@ -7,7 +7,10 @@ def lesaLinu(inf, myndir, akvedni, tala, kyn, fall, st):
   ord = '%s.l' % re.split('\n', inf.readline())[0]
   if ord != '--.l':
     gefur = '%s%s%s%s%s' % (tala, kyn, fall, akvedni, st)
-    gefur = 'A%s+ or BA%s-' % (gefur, gefur)
+    if akvedni == 'a':
+      gefur = 'L%s+' % gefur
+    else:
+      gefur = '{AL%s-} & (L%s+ or LS%s-)' % (st, gefur, gefur)
     if ord in myndir:
       myndir[ord] = '%s or %s' % (myndir[ord], gefur)
     else:
@@ -19,7 +22,7 @@ def make_lo(myndir, inf):
   foll = ['n', 'a', 'd', 'g']
   akvednir = ['o', 'a']
   tolur = ['e', 'f']
-  stig = ['n', 'm', 'e']
+  stig = ['f', 'm', 'e']
 
   for akvedni in akvednir:
     for tala in tolur:

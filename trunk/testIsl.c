@@ -59,6 +59,10 @@ int main() {
   test("fjölskyldur hryðjuverkamanna fá ekki bætur í Bretlandi", dict, opts, TRUE);
   test("fjölskyldur grunaðra hryðjuverkamanna fá ekki bætur í Bretlandi", dict, opts, TRUE);
 
+  test("hundurinn borðar vel", dict, opts, TRUE);
+  test("hundurinn borðar betur", dict, opts, TRUE);
+  test("hundurinn borðar best", dict, opts, TRUE);
+
   dictionary_delete(dict);
   parse_options_delete(opts);
 

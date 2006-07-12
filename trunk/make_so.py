@@ -23,69 +23,69 @@ class Sagnord:
 
 def codeFS(fs):
   if fs == 'á':
-    return "SA"
+    return 'TA'
   elif fs == 'í':
-    return 'SI'
+    return 'TI'
   elif fs == 'niður í':
-    return 'SNIDURI'
+    return 'TNIDURI'
   elif fs == 'fram í fyrir':
-    return 'SFRAMIFYRIR'
+    return 'TFRAMIFYRIR'
   elif fs == 'inn í':
-    return 'SINNI'
+    return 'TINNI'
   elif fs == 'til':
-    return 'STIL'
+    return 'TTIL'
   elif fs == 'um sig':
-    return 'SUMSIG'
+    return 'TUMSIG'
   elif fs == 'fyrir':
-    return 'SFYRIR'
+    return 'TFYRIR'
   elif fs == 'undir':
-    return 'SUNDIR'
+    return 'TUNDIR'
   elif fs == 'sig':
-    return 'SSIG'
+    return 'TSIG'
   elif fs == 'inn á':
-    return 'SINNA'
+    return 'TINNA'
   elif fs == 'úr':
-    return 'SUR'
+    return 'TUR'
   elif fs == 'út':
-    return 'SUT'
+    return 'TUT'
   elif fs == 'á móti':
-    return 'SAMOTI'
+    return 'TAMOTI'
   elif fs == 'niður':
-    return 'SNIDUR'
+    return 'TNIDUR'
   elif fs == 'saman':
-    return 'SSAMAN'
+    return 'TSAMAN'
   elif fs == 'upp':
-    return 'SUPP'
+    return 'TUPP'
   elif fs == 'af':
-    return 'SAF'
+    return 'TAF'
   elif fs == 'út af':
-    return 'SUTAF'
+    return 'TUTAF'
   elif fs == 'upp af':
-    return 'SUPPAF'
+    return 'TUPPAF'
   elif fs == 'undan':
-    return 'SUNDAN'
+    return 'TUNDAN'
   elif fs == 'að':
-    return 'SAD'
+    return 'TAD'
   elif fs == 'upp í':
-    return 'SUPPI'
+    return 'TUPPI'
   elif fs == 'fram':
-    return 'SFRAM'
+    return 'TFRAM'
   elif fs == 'burt':
-    return 'SBURT'
+    return 'TBURT'
   elif fs == 'við':
-    return 'SVID'
+    return 'TVID'
   elif fs == 'með':
-    return 'SMED'
+    return 'TMED'
   elif fs == 'um':
-    return 'SUM'
+    return 'TUM'
   elif fs == 'yfir':
-    return 'SYFIR'
+    return 'TYFIR'
   elif fs == 'upp við':
-    return 'SUPPVID'
+    return 'TUPPVID'
   elif fs == 'til um':
-    return 'STILUM'
+    return 'TTILUM'
   elif fs == 'gegn':
-    return 'SGEGN'
+    return 'TGEGN'
   else:
     print 'Unknown forsetning "%s"' % fs
     assert False

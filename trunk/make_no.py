@@ -21,9 +21,9 @@ def make_no(myndir, inf):
       for fall in foll:
         ord = '%s.n' % re.split('\n', inf.readline())[0]
         stada = '%st%s%s%s' % (tala, kyn, fall, akvedni)
-        gefur = '({[[@A%s%s%s%s-]]} & (({S***g+} & F%s+) or (S%s- & {S***g+})))' % (tala, kyn, fall, akvedni, stada, stada)
+        gefur = '({[[@L%s%s%s%s-]]} & (({S***g+} & F%s+) or (S%s- & {S***g+})))' % (tala, kyn, fall, akvedni, stada, stada)
 	if fall == 'g':
-          gefur = '(({[[@A%s%s%s%s-]]} & S%s-) or (%s))' % (tala, kyn, fall, akvedni, stada, gefur)
+          gefur = '(({[[@L%s%s%s%s-]]} & S%s-) or (%s))' % (tala, kyn, fall, akvedni, stada, gefur)
         if ord in myndir:
           myndir[ord] = '%s or %s' % (myndir[ord], gefur)
         else:
