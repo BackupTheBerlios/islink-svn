@@ -116,7 +116,7 @@ def handleGermynd(myndir, inf, uppl, beyging):
   for persona in personur:
     for tid in tidir:
       for tala in tolur:
-        ord = '%s.%s.s' % (re.split('\n', inf.readline())[0], beyging)
+        ord = '%s.s' % (re.split('\n', inf.readline())[0])
 
         andlag = ''
         optional = False

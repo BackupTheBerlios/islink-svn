@@ -45,7 +45,7 @@ int main() {
   Parse_Options opts;
 
   opts  = parse_options_create();
-  dict  = dictionary_create("t", NULL, NULL, NULL);
+  dict  = dictionary_create("link_grammar/dict", NULL, NULL, NULL);
 
   test("hundur borðar", dict, opts, TRUE);
   test("hundur er vondur", dict, opts, TRUE);
