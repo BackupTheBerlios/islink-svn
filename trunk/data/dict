@@ -12,8 +12,13 @@
 % stig: f / m / e
 %
 % AS = atviksorð sem geta lýst öllum sögnum
-% AL = atviksorð sem geta lýst öðrum sögnum/atviksorðum
+% AH = atviksorð sem geta lýst sömu sögnum og hratt
+% AL = atviksorð sem geta lýst lýsingarorðum/atviksorðum
+% AM = atviksorð sem geta lýst lýsingarorðum
 % AE = ekki
+% AF = atviksorð sem geta lýst sömu sögnum og fljótt
+% AV = atviksorð sem geta lýst sömu sögnum og vel/illa
+% AR = atviksorð sem geta lýst sömu sögnum og rólega
 % F = frumlag
 % IK = forsetningarliður, eða atviksorð, sem tákna hreyfingu
 % IH = hreyfing
@@ -91,56 +96,77 @@ til_um: TTILUM-;
 gegn.sf: TGEGN-;
 
 
-% Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í frumstig
-afar býsna fremur frekar harla mjög ansi: ALf+;
-% Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í miðstig
-mun miklu aðeins dálítið talsvert umtalsvert svolítið langtum: ALm+;
-% Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í efsta stig
+% Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í frumstig
+afar býsna fremur frekar harla mjög ansi gríðarlega ofsalega yfirgengilega fullkomlega sæmilega algjörlega: ALf+;
+% Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í miðstig
+mun miklu aðeins langtum: ALm+;
+% Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í efsta stig
 lang: ALe+;
+% Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í frumstig eða miðstig
+nokkuð talsvert umtalsvert dálítið svolítið: ALf+ or ALm+;
+
+% Atviksorð sem lýsa lýsingarorðum en ekki atviksorðum í frumstig
+alveg.a: AMf+ or ({ALf-} & AVf+);
+
+
 
 % Atviksorð sem lýsa sögnum
 % tímasetningar sem lýsa sögnum
-aldrei þá: AS-;
+aldrei þá yfirleitt stundum alltaf: AS-;
+oft sjaldan: {ALf-} & AS-;
+oftar sjaldnar: {ALm-} & AS-;
+oftast sjaldnast: {ALe-} & AS-;
+
 nú núna bráðum á_eftir á_morgun: ASf-;
-í_gær í_fyrra í_morgun í_fyrradag áðan: ASt-;
+í_gær í_fyrra í_morgun í_gamla_daga í_fyrradag áðan fyrir_löngu löngu_síðar: ASt-; % fyrir langalöngu?
 
-seinna síðar: {ALm-} & ASf-;
-nýlega lengi: {ALf-} & ASt-;
+% todo:
+% fyrir: ASt- & (ST****) & ASFYRIRXXXSIDAN+;
+% síðan: ASFYRIRXXXSIDAN-;
 
+nýlega lengi: {ALf-} & AS-;
+seinna síðar: {ALm-} & AS-;
 
+vel.a illa.a fallega.a: {ALf-} & AVf+;
+betur.a verr.a fallegar.a: {ALm-} & AVm+;
+best.a verst.a fallegast.a: {ALe-} & AVe+;
 
-% ASv = virk sögn (ég fer). ASo = óvirk sögn (ég bíð)
-seint fljótt hratt hægt illa lítt vel hljóðlega hljótt: {ALf-} & ASv-;
+hratt hægt varlega óvarlega: {AHf-} & AVf+;
+hraðar hægar varlegar: {AHe-} & AVe+;
+hraðast hægast varlegast: {AHe-} & AVe+;
 
+hljóðlega órólega rólega innilega: {ARf-} & AVf+;
+hljóðlegar órólegar rólegar innilegar: {ARe-} & AVm+;
+hljóðlegast órólegast rólegast innilegast: {ARe-} & AVe+;
 
-, svo, svona, , þannig 
- hljóðar hljóðast 
- 
+%hljótt hljóðar hljóðast
 
-fljótlega bráðlega 
+fljótt brátt skyndilega fljótlega bráðlega: {ASf-} & AVf+;
+fljótar bráðar skyndilegar fljótlegar bráðlegar: {ASe-} & AVm+;
+fljótast bráðat skyndilegast fljótlegast bráðlegast: {ASe-} & AVe+;
+
 
 % spurnaratviksorð: hvaðan, hvar, hvenær, hvernig, hvert
 
+%aftur.a aftar.a aftast.a
+%lengi.a lengur.a lengst.a
+%mikið meira mest
+%lítið minna minnst
 
 
-fallega bráðlega fullkomlega algjörlega
-
-vel.a betur.a best.a
-hratt.a hraðar.a hraðast.a
-hægt.a hægar.a hægast.a
-beint.a beinar.a beinast.a
-þráðbeint.a
-illa.a ver.a verst.a
-aftur.a aftar.a aftast.a
-lengi.a lengur.a lengst.a
-inn.a innar.a innst.a
-mikið meira mest
-lítið minna minnst
-
+% atviksorð sem tákna (kyrra) staðsetningu:
+heima.a hér.a hérna.a þarna.a úti.a uppi.a niðri.a inni.a frammi.a víða.a: IK-;
+% atviksorð sem tákna (leiðarenda) staðsetningu:
+þráðbeint.a heim.a burt.a af.a þangað.a upp.a út.a yst.a inn.a innst.a hingað.a fram.a niður.a: {AMf-} & IH-; % einhvert eitthvað ??
+beint.a skakkt.a: {AMf- or ALf-} & IH-;
+beinna.a skakkar.a innar.a utar: {AMf- or ALm-} & IH-;
+beinast.a skkast.a: {AMf- or ALe-} & IH-;
 
 % önnur atviksorð
-ekki.a: E-;
-% já nei
+ekki.a: {AEL-} & AE-;
+hreint.a alls.a: AEL+;
+
+% já.a nei.a
 
 
 

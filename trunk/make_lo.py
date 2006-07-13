@@ -10,7 +10,7 @@ def lesaLinu(inf, myndir, akvedni, tala, kyn, fall, st):
     if akvedni == 'a':
       gefur = 'L%s+' % gefur
     else:
-      gefur = '{AL%s-} & (L%s+ or LS%s-)' % (st, gefur, gefur)
+      gefur = '({AL%s-} & (L%s+ or LS%s-))' % (st, gefur, gefur)
     if ord in myndir:
       myndir[ord] = '%s or %s' % (myndir[ord], gefur)
     else:
