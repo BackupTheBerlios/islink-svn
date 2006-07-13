@@ -3,7 +3,7 @@
 % lýsingarorð: [tala][kyn][fall][ákveðni][stig]
 %
 % tala: e / f
-% tíð: þ / n / f
+% tíð: t / n / f
 % persóna: f / o / t
 % háttur: p / v / b
 % kyn: k / v / h
@@ -92,30 +92,38 @@ gegn.sf: TGEGN-;
 
 
 % Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í frumstig
-afar býsna fremur harla mjög ansi: ALf+;
+afar býsna fremur frekar harla mjög ansi: ALf+;
 % Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í miðstig
 mun miklu aðeins dálítið talsvert umtalsvert svolítið langtum: ALm+;
 % Atviksorð sem lýsa lýsingarorðum og öðrum atviksorðum og stýra þeim í efsta stig
 lang: ALe+;
 
-
-
 % Atviksorð sem lýsa sögnum
 % tímasetningar sem lýsa sögnum
-aldrei bráðum
+aldrei þá: AS-;
+nú núna bráðum á_eftir á_morgun: ASf-;
+í_gær í_fyrra í_morgun í_fyrradag áðan: ASt-;
 
-lengi, nú, núna, nýlega, seinna, þá	x
-
-
-afar, fljótt, hratt, hægt, illa, lítt, mjög, svo, svona, vel, þannig 
-hljótt hljóðar hljóðast 
-seint seinlega
-
-hvaðan, hvar, hvenær, hvernig, hvert
+seinna síðar: {ALm-} & ASf-;
+nýlega lengi: {ALf-} & ASt-;
 
 
 
-fallega bráðlega ljótt fullkomlega algjörlega
+% ASv = virk sögn (ég fer). ASo = óvirk sögn (ég bíð)
+seint fljótt hratt hægt illa lítt vel hljóðlega hljótt: {ALf-} & ASv-;
+
+
+, svo, svona, , þannig 
+ hljóðar hljóðast 
+ 
+
+fljótlega bráðlega 
+
+% spurnaratviksorð: hvaðan, hvar, hvenær, hvernig, hvert
+
+
+
+fallega bráðlega fullkomlega algjörlega
 
 vel.a betur.a best.a
 hratt.a hraðar.a hraðast.a
@@ -135,7 +143,6 @@ ekki.a: E-;
 % já nei
 
 
- AL
 
 % sagnorð í nafnhætti:
 % sagnorð í lýsingarhætti þátíðar:
