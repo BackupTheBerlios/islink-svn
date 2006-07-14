@@ -63,6 +63,10 @@ int main() {
   test("hundurinn borðar betur", dict, opts, TRUE);
   test("hundurinn borðar best", dict, opts, TRUE);
 
+  test("hundurinn fór heim", dict, opts, TRUE);
+  test("hundurinn fór beint heim", dict, opts, TRUE);
+  test("hundurinn fór beint heim í gær", dict, opts, TRUE);
+
   dictionary_delete(dict);
   parse_options_delete(opts);
 

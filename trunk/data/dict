@@ -109,7 +109,6 @@ nokkuð talsvert umtalsvert dálítið svolítið: ALf+ or ALm+;
 alveg.a: AMf+ or ({ALf-} & AVf+);
 
 
-
 % Atviksorð sem lýsa sögnum
 % tímasetningar sem lýsa sögnum
 aldrei þá yfirleitt stundum alltaf: AS-;
@@ -119,7 +118,6 @@ oftast sjaldnast: {ALe-} & AS-;
 
 nú núna bráðum á_eftir á_morgun: ASf-;
 í_gær í_fyrra í_morgun í_gamla_daga í_fyrradag áðan fyrir_löngu löngu_síðar: ASt-; % fyrir langalöngu?
-
 % todo:
 % fyrir: ASt- & (ST****) & ASFYRIRXXXSIDAN+;
 % síðan: ASFYRIRXXXSIDAN-;
@@ -130,7 +128,6 @@ seinna síðar: {ALm-} & AS-;
 vel.a illa.a fallega.a: {ALf-} & AVf+;
 betur.a verr.a fallegar.a: {ALm-} & AVm+;
 best.a verst.a fallegast.a: {ALe-} & AVe+;
-
 hratt hægt varlega óvarlega: {AHf-} & AVf+;
 hraðar hægar varlegar: {AHe-} & AVe+;
 hraðast hægast varlegast: {AHe-} & AVe+;
@@ -144,7 +141,6 @@ hljóðlegast órólegast rólegast innilegast: {ARe-} & AVe+;
 fljótt brátt skyndilega fljótlega bráðlega: {ASf-} & AVf+;
 fljótar bráðar skyndilegar fljótlegar bráðlegar: {ASe-} & AVm+;
 fljótast bráðat skyndilegast fljótlegast bráðlegast: {ASe-} & AVe+;
-
 
 % spurnaratviksorð: hvaðan, hvar, hvenær, hvernig, hvert
 

@@ -1,55 +1,29 @@
-	heima	vel	ekki	hljóðl.	hægt	fljótt	langt	heim	
-deyja	2	12	12	12	12	12			
+flokkur	heima	vel	ekki	hljóðl.	hægt	fljótt	langt	heim
+fara	2	2	12	2	2	2	2	2
+flytja fylgja senda bjóða aka hlaupa ganga kalla stökkva horfa líta ætla sjá hverfa fara  
 
-mála	2	2	12	2	2	12			
-týna	2	2	12	2	2	12			
-leggja	2	2	12	2	2	12			
-þjóna	2	2	12	2	2	12			
-læra	2	2	12	2	2	12			
-nota	2	2	12	2	2	12			
-enda	2	2	12	2	2	12			
-vinna	2	2	12	2	2	12			
-ræða	2	2	12	2	2	12			
-byrja	2	2	12	2	2	12			
+gefa	2	2	12	2	2	12		2
+fá gefa
+
+deyja	2	12	12	12	12	12			
+deyja
+
 gera	2	2	12	2	2	12			
-finna	2	2	12	2	2	12			
+mála týna leggja þjóna læra nota enda vinna ræða byrja gera finna				
 
 virða	2		12	2					
+virða
 
-búa	2	1	1	1					
 sitja	2	1	1	1					
-liggja	2	1	1	1					
-bíða	2	1	1	1					
+sitja búa liggja bíða
 
 verða	2		1		1	1
+
 vera	2		1
+vera hafa
 
-geta	2	2	12			2			
-vita	2	2	12			2			
 eiga	2	2	12			2			
-mega	2	2	12			2			
-þurfa	2	2	12			2			
-kunna	2	2	12			2			
-
-fá	2	2	12	2	2	12		2
-gefa	2	2	12	2	2	12		2
-
-flytja	2	2	12	2	2	2	2	2
-fylgja	2	2	12	2	2	2	2	2
-senda	2	2	12	2	2	2	2	2
-bjóða	2	2	12	2	2	2	2	2
-aka	2	2	12	2	2	2	2	2
-hlaupa	2	2	12	2	2	2	2	2
-ganga	2	2	12	2	2	2	2	2
-kalla	2	2	12	2	2	2	2	2
-stökkva	2	2	12	2	2	2	2	2
-horfa	2	2	12	2	2	2	2	2
-líta	2	2	12	2	2	2	2	2
-ætla	2	2	12	2	2	2	2	2
-sjá	2	2	12	2	2	2	2	2
-hverfa	2	2	12	2	2	2	2	2
-fara	2	2	12	2	2	2	2	2
+geta eiga vita mega þurfa kunna				
 
 munu
-skulu
-
+munu skulu

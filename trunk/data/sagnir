@@ -1,44 +1,45 @@
-grípa.sb	n	a	niður í,a	í,a	fram í fyrir,d	inn í,a	til,g	um sig,x	á,d	fyrir,a	undir,a
-minna.vb	n	x,a	á,a
+grípa.sb	n	a	gera	niður í,a	í,a	fram í fyrir,d	inn í,a	til,g	um sig,x	á,d	fyrir,a	undir,a
+minna.vb	n	x,a	gera	á,a
+vera	n	n	vera
 
-borða.vb	n	x,a
-borga.vb	n	a,d,d-a	sig,x	inn á,a	undir,a	úr,d	út,a
-brjóta.sb	n	a,d-a	af,d	á,a	á móti,d	niður,a	saman,a	upp,a
-deyja.sb	n	x,d
-elska.vb	n	a
-eyða.vb	n	d
-fá.sb	n	a	á,x,a
-geyma.vb	n	a
-hafna.vb	n	d
-hefna.vb	n	g	fyrir,a
-hlýða.vb	n	x,d	á,a
-hreinsa.vb	n	a	til,x
-hrökkva.sb	n	x,a	til,x,g	fyrir,d	af,d	út af,d	af,d	í,a	saman,x	upp af,x,d	upp,x	úr,x,d	undan,x,d
-höggva.sb	n	x,a	á,a	í,a	af,a	til,a
-játa.vb	n	x,a,d-a
-klappa.vb	n	x,d	saman,d	fyrir,d
-kúga.vb	n	a
-kyssa.vb	n	x,a	á,a
-lúta.sb	n	x,a	í,a	undir,a	að,d
-mála.vb	n	x,a
-rugla.vb	n	x,a,d	í,d	saman,d
-skoða.vb	n	a	í,a	til,x,g	upp í,a
-spretta.vb	n	x,a	á,a
-spretta.sb	n	g	úr,d	upp,x,d	fram,n
-styðja.vb	n	a	á,a	í,a	við,a	að,d
-stökkva.vb	n	x,d
-stökkva.sb	n	x	burt,x	af,d	á,a	í,a	við,a
-synda.vb	n	x,a
-syngja.sb	n	x,d-a,a,d	í,a	inn á,a	fyrir,a	með,x,d	á,d	fyrir,d
-tefla.vb	n	x,a,d	fram,d	á,a	við,a	um,a
-trufla.vb	n	x,a
-trúa.vb	n	x,d	á,a
-týna.vb	n	d
-valda.vb	n	a
-valda2.vb	n	d,d-d
-vaxa.sb	n	x,d	úr,d	yfir,a	upp við,a	upp,x
-verja.vb	n	x,a,d
-vitna.vb	n	x,a	fyrir,d	um,a	til um,a	í,a	gegn,d	um,a	til,g	á móti,d
-þakka.vb	n	x,a-d,a,d	fyrir,a
-þiggja.vb	n	a	af,d	með,d
-þjóna.vb	n	d	til,g	undir,d
+borða.vb	n	x,a	gera
+borga.vb	n	a,d,d-a	gera	sig,x	inn á,a	undir,a	úr,d	út,a
+brjóta.sb	n	a,d-a	gera	af,d	á,a	á móti,d	niður,a	saman,a	upp,a
+deyja.sb	n	x,d	deyja
+elska.vb	n	a	gera
+eyða.vb	n	d	gera
+fá.sb	n	a	gefa	á,x,a
+geyma.vb	n	a	gera
+hafna.vb	n	d	gera
+hefna.vb	n	g	gera	fyrir,a
+hlýða.vb	n	x,d	sitja	á,a
+hreinsa.vb	n	a	gera	til,x
+hrökkva.sb	n	x,a	fara	til,x,g	fyrir,d	af,d	út af,d	af,d	í,a	saman,x	upp af,x,d	upp,x	úr,x,d	undan,x,d
+höggva.sb	n	x,a	gera	á,a	í,a	af,a	til,a
+játa.vb	n	x,a,d-a	gera
+klappa.vb	n	x,d	gera	saman,d	fyrir,d
+kúga.vb	n	a	gera
+kyssa.vb	n	x,a	gera	á,a
+lúta.sb	n	x,a	gera	í,a	undir,a	að,d
+mála.vb	n	x,a	gera
+rugla.vb	n	x,a,d	gera	í,d	saman,d
+skoða.vb	n	a	gera	í,a	til,x,g	upp í,a
+spretta.vb	n	x,a	gera	á,a	úr,d
+spretta.sb	n	g	fara	úr,d	upp,x,d	fram,n
+styðja.vb	n	a	gera	á,a	í,a	við,a	að,d
+stökkva.vb	n	x,d	fara
+stökkva.sb	n	x	fara	burt,x	af,d	á,a	í,a	við,a
+synda.vb	n	x,a	fara
+syngja.sb	n	x,d-a,a,d	gera	í,a	inn á,a	fyrir,a	með,x,d	á,d	fyrir,d
+tefla.vb	n	x,a,d	gera	fram,d	á,a	við,a	um,a
+trufla.vb	n	x,a	gera
+trúa.vb	n	x,d	gera	á,a
+týna.vb	n	d	gera
+valda.vb	n	a	gera
+valda2.vb	n	d,d-d	gera
+vaxa.sb	n	x,d	fara	úr,d	yfir,a	upp við,a	upp,x
+verja.vb	n	x,a,d	gera
+vitna.vb	n	x,a	gera	fyrir,d	um,a	til um,a	í,a	gegn,d	um,a	til,g	á móti,d
+þakka.vb	n	x,a-d,a,d	gera	fyrir,a
+þiggja.vb	n	a	gera	af,d	með,d
+þjóna.vb	n	d	gera	til,g	undir,d

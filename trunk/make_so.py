@@ -10,8 +10,9 @@ class Sagnord:
     self.nh = l[0]
     self.gerandi = l[1]
     self.tholandi = re.split(',', l[2]) #self.faFoll(l[2])
+    self.flokkur = l[3]
     self.samsett = []
-    for i in l[3:]:
+    for i in l[4:]:
       self.samsett.append(re.split(',', i))
 #      self.samsett.append([ss[0], ss[1:]]) #self.faFoll(ss[1])])
 
