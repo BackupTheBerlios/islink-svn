@@ -158,7 +158,7 @@ def handleGermynd(myndir, inf, uppl, beyging):
 
             andlag = append(andlag, '(%s+ & %s)' % (cfs, andl), 'or')
 
-        gefur = '(F%s%s*n- & {E+} & (%s) & {@IK+})' % (tala, persona, andlag)
+        gefur = '(F%s%s*n- & (({AE+} & (%s)) or ((%s) & {AE+})) & {AV+ or AR+ or AS+ or AH+} & {@IK+})' % (tala, persona, andlag, andlag)
 
         if ord in myndir:
           myndir[ord] = '%s or %s' % (myndir[ord], gefur)

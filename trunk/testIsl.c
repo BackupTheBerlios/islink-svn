@@ -60,6 +60,27 @@ int main() {
   test("fjölskyldur grunaðra hryðjuverkamanna fá ekki bætur í Bretlandi", dict, opts, TRUE);
 
   test("hundurinn borðar vel", dict, opts, TRUE);
+  test("hundurinn borðar vel heima", dict, opts, TRUE);
+  test("hundurinn borðar ekki vel heima", dict, opts, TRUE);
+  test("hundurinn borðar vel ekki heima", dict, opts, FALSE);
+  test("hundurinn borðar vel heima ekki", dict, opts, FALSE);
+  test("hundurinn borðar matinn vel heima", dict, opts, TRUE);
+  test("hundurinn borðar vel matinn heima", dict, opts, FALSE);
+  test("hundurinn borðar ekki vel matinn heima", dict, opts, FALSE);
+  test("hundurinn borðar matinn ekki", dict, opts, TRUE);
+  test("hundurinn borðar ekki matinn", dict, opts, TRUE);
+  test("hundurinn borðar ekki matinn vel heima", dict, opts, TRUE);
+  test("hundurinn borðar matinn ekki vel heima", dict, opts, TRUE);
+  test("hundurinn borðar matinn vel ekki heima", dict, opts, FALSE);
+  test("hundurinn borðar matinn vel fljótt", dict, opts, FALSE);
+  test("hundurinn borðar matinn hratt í Bretlandi", dict, opts, TRUE);
+  test("hundurinn borðar matinn miklu hraðar í Bretlandi", dict, opts, TRUE);
+  test("hundurinn borðar matinn ekki miklu hraðar í Bretlandi", dict, opts, TRUE);
+  test("hundurinn borðar matinn ekki oft miklu hraðar í Bretlandi", dict, opts, TRUE);
+  test("hundurinn borðar matinn ekki oft ekki miklu hraðar í Bretlandi", dict, opts, TRUE);
+
+
+  test("hundurinn borðar vel", dict, opts, TRUE);
   test("hundurinn borðar betur", dict, opts, TRUE);
   test("hundurinn borðar best", dict, opts, TRUE);
 

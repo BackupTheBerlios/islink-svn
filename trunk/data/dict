@@ -11,7 +11,7 @@
 % ákveðni: a / o
 % stig: f / m / e
 %
-% AS = atviksorð sem geta lýst öllum sögnum
+%%%%%%%%%%% AS = atviksorð sem geta lýst öllum sögnum
 % AH = atviksorð sem geta lýst sömu sögnum og hratt
 % AL = atviksorð sem geta lýst lýsingarorðum/atviksorðum
 % AM = atviksorð sem geta lýst lýsingarorðum
@@ -19,6 +19,9 @@
 % AF = atviksorð sem geta lýst sömu sögnum og fljótt
 % AV = atviksorð sem geta lýst sömu sögnum og vel/illa
 % AR = atviksorð sem geta lýst sömu sögnum og rólega
+% AT = tímasetning sem vill standa fyrir aftan stað í venjulegri setningu, t.d. "á eftir" eða "í gær" (getur stjórnað tíð)
+% AU = tímasetning sem vill standa á undan stað í venjulegri setningu, t.d. bráððum (getur stjórnað tíð)
+% AT = tímasetning, t.d. "á eftir" eða "í gær" (getur stjórnað tíð)
 % F = frumlag
 % IK = forsetningarliður, eða atviksorð, sem tákna hreyfingu
 % IH = hreyfing
@@ -27,7 +30,9 @@
 % S = andlag
 % T* = forsetning sem er hluti af sögn
 
-er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkno- & {E+} & LSekno*+) or (Fetvno- & {E+} & LSevno*+) or (Fethno- & {E+} & LSehno*+)) & {IK+};
+%er.v: ((Fet*n*- & {E+} & S***n+) or (Fetkno- & {E+} & LSekno*+) or (Fetvno- & {E+} & LSevno*+) or (Fethno- & {E+} & LSehno*+)) & {IK+};
+
+
 
 % Forsetningar
 
@@ -97,9 +102,10 @@ gegn.sf: TGEGN-;
 
 
 % Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í frumstig
-afar býsna fremur frekar harla mjög ansi gríðarlega ofsalega yfirgengilega fullkomlega sæmilega algjörlega: ALf+;
+afar býsna fremur frekar harla ansi sæmilega: ALf+;
+mjög gríðarlega ofsalega yfirgengilega fullkomlega algjörlega: {AE-} & ALF+;
 % Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í miðstig
-mun miklu aðeins langtum: ALm+;
+mun miklu aðeins langtum: {ALf-} & ALm+;
 % Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í efsta stig
 lang: ALe+;
 % Atviksorð sem lýsa lýsingarorðum og atviksorðum og stýra þeim í frumstig eða miðstig
@@ -111,36 +117,86 @@ alveg.a: AMf+ or ({ALf-} & AVf+);
 
 % Atviksorð sem lýsa sögnum
 % tímasetningar sem lýsa sögnum
-aldrei þá yfirleitt stundum alltaf: AS-;
-oft sjaldan: {ALf-} & AS-;
-oftar sjaldnar: {ALm-} & AS-;
-oftast sjaldnast: {ALe-} & AS-;
 
-nú núna bráðum á_eftir á_morgun: ASf-;
-í_gær í_fyrra í_morgun í_gamla_daga í_fyrradag áðan fyrir_löngu löngu_síðar: ASt-; % fyrir langalöngu?
+% 1 ég fer í skólann X
+% 2 ég fer ekki X í skólann
+% 3 ég fer X ekki í skólann
+%
+% 		1f	2f	3f	1t	2t	3t
+% fyrir löngu				x
+% á eftir	x
+%
+% aldrei		 	x			x
+% yfirleitt		 	x			x
+% stundum		 	x			x
+% nú			 	x			x
+%
+% alltaf		x			x
+% núna			x			x
+%
+% oft			x	x		x	x
+% sjaldan		x	x		x	x
+%
+% bráðum	x	x	x
+% bráðlega	x	x	x
+% seint		x	x	x	x	x	x
+% seinna	x	x	x	x	x	x
+% áðan					x	x	x
+% nýlega				x	x	x
+% lengi					x	x	x
+%
+% AT- gefur 1
+% AU*a- gefur 2
+% AU*b- gefur 3
+% AU- gefur 2 og 3
+
+í_gær í_fyrra í_morgun í_gamla_daga í_fyrradag fyrir_löngu: ATt-; % fyrir langalöngu?
+á_eftir á_morgun: ATf-;
+
+aldrei nú þá yfirleitt stundum: AU*b-;
+
+alltaf núna: AU*a-;
+
+núna: AU-;
+oft sjaldan: {ALf-} & AU-;
+oftar sjaldnar: {ALm-} & AU-;
+oftast sjaldnast: {ALe-} & AU-;
+
+bráðum: AUf- or ATf-;
+bráðlega: {ALf-} & (AUf- or ATf-);
+
+áðan: AUt- or ATt-;
+lengi nýlega: {ALf-} & (AUt- or ATt-);
+lengur: {ALf-} & (AUt- or ATt-);
+lengst: {ALf-} & (AUt- or ATt-);
+
+seint snemma bráðlega: {ALm-} & (AU- or AT-);
+seinna síðar: {ALm-} & (AU- or AT-);
+seinast síðast: {ALe-} & (AU- or AT-);
+
 % todo:
 % fyrir: ASt- & (ST****) & ASFYRIRXXXSIDAN+;
 % síðan: ASFYRIRXXXSIDAN-;
 
-nýlega lengi: {ALf-} & AS-;
-seinna síðar: {ALm-} & AS-;
 
-vel.a illa.a fallega.a: {ALf-} & AVf+;
-betur.a verr.a fallegar.a: {ALm-} & AVm+;
-best.a verst.a fallegast.a: {ALe-} & AVe+;
-hratt hægt varlega óvarlega: {AHf-} & AVf+;
-hraðar hægar varlegar: {AHe-} & AVe+;
-hraðast hægast varlegast: {AHe-} & AVe+;
 
-hljóðlega órólega rólega innilega: {ARf-} & AVf+;
-hljóðlegar órólegar rólegar innilegar: {ARe-} & AVm+;
-hljóðlegast órólegast rólegast innilegast: {ARe-} & AVe+;
+vel.a illa.a fallega.a: {ALf-} & AVf-;
+betur.a verr.a fallegar.a: {ALm-} & AVm-;
+best.a verst.a fallegast.a: {ALe-} & AVe-;
+
+hratt hægt varlega óvarlega: {ALf-} & AHf-;
+hraðar hægar varlegar: {ALm-} & AHe-;
+hraðast hægast varlegast: {ALe-} & AHe-;
+
+hljóðlega órólega rólega innilega: {ALf-} & ARf-;
+hljóðlegar órólegar rólegar innilegar: {ALm-} & ARm-;
+hljóðlegast órólegast rólegast innilegast: {ALe-} & ARe-;
 
 %hljótt hljóðar hljóðast
 
-fljótt brátt skyndilega fljótlega bráðlega: {ASf-} & AVf+;
-fljótar bráðar skyndilegar fljótlegar bráðlegar: {ASe-} & AVm+;
-fljótast bráðat skyndilegast fljótlegast bráðlegast: {ASe-} & AVe+;
+fljótt brátt skyndilega fljótlega bráðlega: {ALf-} & ASf-;
+fljótar bráðar skyndilegar fljótlegar bráðlegar: {ALe-} & ASm-;
+fljótast bráðat skyndilegast fljótlegast bráðlegast: {ALe-} & ASe-;
 
 % spurnaratviksorð: hvaðan, hvar, hvenær, hvernig, hvert
 
@@ -159,7 +215,7 @@ beinna.a skakkar.a innar.a utar: {AMf- or ALm-} & IH-;
 beinast.a skkast.a: {AMf- or ALe-} & IH-;
 
 % önnur atviksorð
-ekki.a: {AEL-} & AE-;
+ekki.a: {AEL-} & (AE- or AL+);
 hreint.a alls.a: AEL+;
 
 % já.a nei.a
@@ -170,3 +226,18 @@ hreint.a alls.a: AEL+;
 % sagnorð í lýsingarhætti þátíðar:
 % sagnorð í lýsingarhætti nútíðar:
 % fornafn: [tala][kyn][fall][persóna]
+
+
+%rennur: Fet*n*- & {AE+} & {S***d+} & {AE+} & {AV+ or AR+ or AS+} & {@IK+};
+
+% AV+
+% AV+ & IK+
+% AE+ & AV+ & IK+
+%*AV+ & AE+ & IK+
+%*AV+ & IK+ & AE+
+% S** & AV+ & IK+
+%*AE+ & AV+ & S**
+%*AV+ & S** & IK+
+% S** & AE+
+% AE+ & S**
+% AE+ & S** & AV+ & IK+
